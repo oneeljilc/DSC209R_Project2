@@ -249,21 +249,79 @@
           <figcaption>A bar plot comparing the % change in abortion rate for state's that did not see a change in the number of abortion clinics, from 2017 to 2020.</figcaption>
         </figure>
 
-        <p>Design Decisions and Rationale:</p>
+        <p><strong>Design Decisions and Rationale:</strong></p>
 
         <ul>
-          <li>Data Transformation: Reducing the dataset</li>
-
-          <li>Data Transformation: Sorting the dataset</li>
-          <li>Annotation: Color Scale</li>
-          <li>Annotation: Text</li>
+          <li><u>Data Transformation:</u> Reducing the dataset</li>
+            <ul>
+              <li>Score: -0.5</li>
+              <li>I reduced the dataset to include only those states where the number of abortion clinics 
+                did not change (i.e., ['% change in the no. of abortion clinics, 2017-2020'] == 0). I find this 
+                to be mildly deceptive because it does exclude the data at the heart of the proposition which 
+                are states where the number of abortion clinics decreased. However, the intention is to disprove the 
+                proposition by showing instances where the decrease in abortion rate has nothing to do with the 
+              loss of clinics.</li>
+              <li>This decision makes my visualization more persuasive by focusing the reader on only the data 
+                that potentially contradicts the proposition. I think this more focused dataset works well; 
+                however, astute readers will probably notice the limited scope of the data.</li>
+              <li>As an alternative, I considered plotting the data where the number of clinics increased and 
+                the abortion rate still decreased; however, this only happened in 2 states.</li>
+            </ul>
+          <li><u>Data Transformation:</u> Sorting the dataset</li>
+            <ul>
+              <li>Score: 1.5</li>
+              <li>I sorted the data so that the bars will be in descending order left-to-right (i.e.,  
+                subset.sort_values('% change in abortion rate, 2017-2020', ascending=False)). I don't 
+              think this is a deceptive decision, it just makes the bars more pleasing to look at.</li>
+              <li>This decision makes my visualization more persuasive by clearly showing the wide range of 
+                abortion rates among states with no change to the number of clinics.
+              </li>
+              <li>As an alternative, I considered ordering the bars by alphabetical order or region, but I 
+                actually found this to be less convincing and more chaotic. It was harder to visualize how much the 
+                rates actually vary.
+              </li>
+            </ul>
+          <li><u>Annotation:</u> Color Scale</li>
+            <ul>
+              <li>Score: 0.5</li>
+              <li>I added a red-blue color scale to the bars such that very positive numbers are more red, numbers 
+                close to zero are more gray, and very negative numbers are more blue. This doesn't feel deceptive 
+                because it is simply emphasizing the height of the bars which are already visible. It is also 
+                emphasizing that the range of values is quite large, spanning highly positive to highly negative.
+              </li>
+              <li>This decision makes my visualization more persuasive by clearly emphasizing the range in values and 
+                that there is no clear trend. Meaning that states saw a range of outcomes, including significant 
+                decreases in abortion rates, despite no real change in the number of clinics.
+              </li>
+              <li>As an alternative, I considered no color scale and putting the % numbers directly on the bars, but the 
+                color scale felt a lot cleaner and easier to pick up on at a glance.
+              </li>
+            </ul>
+          <li><u>Annotation:</u> Text</li>
+            <ul>
+              <li>Score: 2.0</li>
+              <li>I added a text box that highlights the range in values, as described in the previous design 
+                decisions. I don't think this is deceptive because it simply points out an earnest observation 
+                of the data.
+              </li>
+              <li>This decision makes my visualization more persuasive by clearly describing to the reader the 
+                basis of my "Against" proposition, instead of relying on them to come to the observation on 
+                their own. I think this annotation works well because it looks very clean and professional on the graph.
+              </li>
+              <li>As an alternative, I considered no annotation and also different formats of this annotation. 
+                Ultimately, I liked the simple look of a shadowed text box in the white space of the graph. The way that
+                the bars are organized leaves the perfect white space on the chart to fill with an annotation like this one.
+              </li>
+            </ul>
         </ul>
       </section>
 
       <section>
         <h2>Final Reflection</h2>
 
-        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+        <p>Overall, I found the initial data exploration and deciding on a propsition to be the most difficult 
+          part of this project. Specifically because we had to argue for both sides.
+        </p>
       </section>
     </main>
   </body>
