@@ -162,12 +162,20 @@
           <figcaption>A scatterplot comparing the % decrease in abortion vs. the % loss of abortion clinics, from 2017 to 2020.</figcaption>
         </figure>
 
-        <p>Design Decisions and Rationale:</p>
+        <p><strong>Design Decisions and Rationale:</strong></p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li><u>Data Transformation:</u> Reducing the dataset</li>
+            <ul>
+              <li>Score: -1.0</li>
+              <li>I reduced the dataset to include only those states where the number of abortion clinics decreased (i.e., ['% change in the no. of abortion clinics, 2017-2020'] < 0). 
+                This means the graph will no longer include instances where the number of abortion clinics increased, but the abortion rate decreased. These data points do not support the proposition so leaving them out is
+              deceptive.</li>
+              <li>This decision helps make my visualization more persuasive by only including data where the </li>
+            </ul>
+          <li><u>Data Transformation:</u> Calculating new column</li>
+          <li><u>Annotation:</u> Linear Trendline</li>
+          <li><u>Annotation:</u> Highlight key outliers</li>
         </ul>
       </section>
 
@@ -182,9 +190,10 @@
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Data Transformation: Reducing the dataset</li>
+          <li>Data Transformation: Sorting the dataset</li>
+          <li>Annotation: Color Scale</li>
+          <li>Annotation: Text</li>
         </ul>
       </section>
 
