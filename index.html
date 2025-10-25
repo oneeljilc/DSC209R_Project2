@@ -169,18 +169,75 @@
             <ul>
               <li>Score: -1.5</li>
               <li>I reduced the dataset to include only those states where the number of abortion clinics 
-                decreased (i.e., ['% change in the no. of abortion clinics, 2017-2020'] < 0). This means the 
-                graph will no longer include instances where the number of abortion clinics increased, but the 
-                abortion rate decreased. These data points directly contradict the proposition so leaving them 
-                out is deceptive.</li>
+                decreased (i.e., ['% change in the no. of abortion clinics, 2017-2020'] < 0) since this is the
+                heart of the proposition. This means the graph will no longer include instances where the 
+                number of abortion clinics increased, but the abortion rate decreased. These data points 
+                directly contradict the proposition so leaving them out is deceptive.</li>
               <li>This decision makes my visualization more persuasive by focusing the reader on only the data 
                 that potentially supports the proposition. I think this more focused dataset works well; 
                 however, astute readers will probably notice that the visualization has less than 50 data 
                 points (for all 50 states) and may wonder what the missing data says.</li>
+                <li>As an alternative, I considered plotting all of that data anyway and relying more heavily 
+                  on the annotations/trendline, but I found that the plot was too busy and it made my other
+                decisions seemed more obviously deceptive.</li>
             </ul>
           <li><u>Data Transformation:</u> Calculating new column</li>
+            <ul>
+              <li>Score: -0.5</li>
+              <li>I added a new column of data called "% Loss in abortion clinics (2017 to 2020)" that is the 
+                ['% change in the no. of abortion clinics, 2017-2020'] * -1. Since my previous design decision 
+                left me with only states that lost abortion clinics (i.e., % change is negative), this data 
+                transformation simply makes the % change positive. I don't believe that this is a major 
+                deception; however, I am slightly adjusting the data to tell a more persuasive story which 
+                feels mildly deceptive.
+              </li>
+              <li>This decision makes my visualization more persuasive by allowing me to plot the data in the 
+                4th quadrant (x is +, y is -). This means that in support of the proposition, an increase in 
+                the loss of clinics (x) should result in a decrease in the abortion rate (y). This allows for 
+                an intuitive "down-and-to-the-right" trend which most English readers associate with a decrease.
+              </li>
+                <li>As an alternative, I considered plotting in the other three coordinates, including the 
+                  3rd coordinate of the original data (x is -, y is -), but found that the "decreasing" trend 
+                  I am trying to support was not as immediately clear. In fact, in the original data, it 
+                  almost looks like an "increasing" trend as the line goes "up-and-to-the-right" when viewed 
+                  left to right, as in traditional in Enlgish reading.
+                </li>
+            </ul>
           <li><u>Annotation:</u> Linear Trendline</li>
-          <li><u>Annotation:</u> Highlight key outliers</li>
+            <ul>
+              <li>Score: -2.0</li>
+              <li>I added a linear fit trendline to the data and made it a solid red in order to stand out 
+                confidently against the gray data. This decision feels the most deceptive for a few reasons. 
+                First, this trendline is exactly what my proposition is asserting and while it comes <em>from</em> 
+                the data, it is not data itself. Second, it is actually not a very good fit for this data and I 
+                purposely did not include or report a "goodness of fit" metric like R-squared.
+              </li>
+              <li>This decision makes my visualization more persuasive by visually asserting that my proposition 
+                is true and guiding readers to see the trend that I want them to see. While the linear fit is 
+                actually not very good per the R-squared value, I think it doesn't look too deceptive on the plot. 
+                especially with the reduced dataset per my first design choice.
+              </li>
+                <li>As an alternative, I considered no trendline or a more complex fit (like polynomial). With 
+                  no trendline, I was relying too much on Text (title/subtitle, annotations) to assert my 
+                  proposition. Additionally, more complex trendlines actually seemed more deceptive and 
+                  countered my rather simple proposition.
+                </li>
+            </ul>
+          <li><u>Annotation:</u> Color & Highlight key outliers</li>
+            <ul>
+              <li>Score: -0.5</li>
+              <li>I used coloring and annotations to highlight a few key states that really support my 
+                proposition, while reducing emphasis on those states that don't really support it.
+              </li>
+              <li>This decision makes my visualization more persuasive by drawing the reader to the data and 
+                trend that I want them to see.
+              </li>
+                <li>As an alternative, I considered no trendline or a more complex fit (like polynomial). With 
+                  no trendline, I was relying too much on Text (title/subtitle, annotations) to assert my 
+                  proposition. Additionally, more complex trendlines actually seemed more deceptive and 
+                  countered my rather simple proposition.
+                </li>
+            </ul>
         </ul>
       </section>
 
